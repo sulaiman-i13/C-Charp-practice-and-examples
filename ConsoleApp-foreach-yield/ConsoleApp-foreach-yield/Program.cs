@@ -24,3 +24,18 @@ ForEach(seq1);
 ForEach(seq2);
 
 #endregion
+
+#region yield
+
+IEnumerable<string> SomethingToDo()
+{
+	for (int i = 0; i < 100; i++)
+	{
+		yield return $"i: {i}";
+	}
+}
+foreach (var item in SomethingToDo())
+{
+    Console.WriteLine(item);
+}
+#endregion

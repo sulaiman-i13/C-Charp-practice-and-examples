@@ -1,4 +1,5 @@
-﻿
+﻿using System.Text;
+
 #region conversion to string example
 
 //Console.WriteLine($"{"char",-12}{"binary",12}{"octal",12}{"dec",12}{"hex",12}");
@@ -13,8 +14,6 @@
 //	Console.WriteLine($"{ch,-12}{binary,12}{octal,12}{dec,12}{hex,12}");
 //}
 #endregion
-
-
 #region string istansiation
 
 ////quoted string literals
@@ -62,11 +61,6 @@
 //Console.WriteLine(str7);
 
 #endregion
-
-
-
-
-
 #region string formatting
 
 
@@ -95,7 +89,6 @@
 
 //Console.WriteLine(str3);
 #endregion
-
 #region string comparison
 
 
@@ -111,7 +104,6 @@
 //Console.WriteLine(string.Equals(graphem12, graphem3, StringComparison.Ordinal));
 //Console.WriteLine(string.Equals(graphem12.Normalize(), graphem3.Normalize(), StringComparison.Ordinal));
 #endregion
-
 #region string intern pool
 
 //var str1 = "sulaiman";
@@ -132,14 +124,12 @@
 
 
 #endregion
-
 #region copyto
 //var str1 = "sulaiman";
 //var chArray = "full stack developer,00000000".ToCharArray();
 //str1.CopyTo(0, chArray, chArray.Length-str1.Length, str1.Length);
 //foreach(var ch in chArray) Console.Write(ch);
 #endregion
-
 #region compare
 //var str1 = "Sulaiman";
 //var str2 = "sulaiman";
@@ -147,8 +137,6 @@
 //Console.WriteLine(string.Compare(str1,str2,false));//1
 //Console.WriteLine(string.Compare(str2,str1,false));//-1
 #endregion
-
-
 #region contains
 //var str = "Sulaiman";
 //Console.WriteLine(str.StartsWith("s",StringComparison.OrdinalIgnoreCase));
@@ -156,8 +144,6 @@
 //Console.WriteLine(str.Contains("lai"));
 //Console.WriteLine(str.IndexOf("m"));
 #endregion
-
-
 #region null or empty or white space
 //var str1 = "";
 //var str2 = " ";
@@ -175,9 +161,6 @@
 //Console.WriteLine($"{string.IsNullOrWhiteSpace(str4)}");//true
 
 #endregion
-
-
-
 #region string modify
 
 //var str = "suaivajne";
@@ -187,8 +170,6 @@
 //str = str.Substring(0, 8);//sulaiman
 //Console.WriteLine(str);
 #endregion
-
-
 #region case
 
 //var str = "Sulaiman";
@@ -197,8 +178,6 @@
 //Console.WriteLine(str.ToUpper());
 //Console.WriteLine(str.ToUpperInvariant());
 #endregion
-
-
 #region trim
 
 //var str = "   sulaiman   ";
@@ -210,7 +189,6 @@
 //Console.WriteLine(str2.TrimEnd('+'));
 //Console.WriteLine(str2.Trim('+'));
 #endregion
-
 #region to char array
 //var str = "sulaiman";
 //char[] chArray = str.ToCharArray();
@@ -219,17 +197,119 @@
 //    Console.WriteLine(item);
 //}
 #endregion
-
-
 #region splitting
 
 //var str = "s u l a i m a n";
 //string[] list = str.Split();
 //foreach(var i in list) Console.WriteLine(i);
 #endregion
-
 #region join
 //string[] arr = ["sulaiman", "ibrahem", "ismaeel",];
 //var str = string.Join(" ", arr);
 //Console.WriteLine(str);
+#endregion
+#region string builder example
+
+//var sb = new StringBuilder();
+//sb.Append(new char[] { 's', 'u', 'l' });
+//sb.AppendFormat("{0}{1}{2}", "a", "i", "m");
+//sb.Insert(6, "ann");
+//sb.Replace("nn", "n");
+//Console.WriteLine(sb.ToString());
+
+
+#endregion
+
+#region string builder length,capacity and max capacity
+
+//var sb = new StringBuilder();//capacity 0
+//Console.WriteLine($"length: {sb.Length}, capacity: {sb.Capacity}, max capacity: {sb.MaxCapacity} .");
+//sb.Append("I am Suliman I. ,Web developer ."); //capacity 32
+//Console.WriteLine($"length: {sb.Length}, capacity: {sb.Capacity}, max capacity: {sb.MaxCapacity} .");
+//sb.Append(".");//capacity 64
+//Console.WriteLine($"length: {sb.Length}, capacity: {sb.Capacity}, max capacity: {sb.MaxCapacity} .");
+#endregion
+#region instanciate string builder with capacity
+//var sb = new StringBuilder(9);
+//Console.WriteLine(sb.Capacity);
+//sb.Append("Hi,this is sulaiman");
+//Console.WriteLine(sb.Capacity);
+//sb.Append("ASP.NET Core Web Developper");
+//Console.WriteLine(sb.Capacity);
+//sb.Append("Practic is the solution");
+//Console.WriteLine(sb.Capacity);
+
+//foreach (var chunk in sb.GetChunks())
+//{
+//    Console.WriteLine(chunk);
+//}
+#endregion
+#region instanciate string builder a string and capacity
+//var sb = new StringBuilder("Hello World, ",4);
+//Console.WriteLine(sb.Capacity);
+//sb.Append("Hi,this is sulaiman");
+//Console.WriteLine(sb.Capacity);
+//sb.Append("ASP.NET Core Web Developper");
+//Console.WriteLine(sb.Capacity);
+
+#endregion
+#region instanciate string builder a string,index,length and capacity
+//var sb = new StringBuilder("Hello World,this is sulaiman",20,8,7);
+//Console.WriteLine(sb.Capacity);
+//sb.Append("ASP.NET Core Web Developper");
+//Console.WriteLine(sb.Capacity);
+
+#endregion
+
+#region string builer chaining append 
+//var sb = new StringBuilder();
+//sb.Append("Sulaiman ").Append("Ibrahem ").Append("Ismaeel.");
+//Console.WriteLine(sb.ToString());
+
+#endregion
+
+#region string builer  append join, clear
+//var sb = new StringBuilder();
+//var arr = new string[] { "Sulaiman", "Ibrahem", "Ismaeel" };
+//sb.AppendJoin(" ", arr);
+//Console.WriteLine(sb.ToString());
+//sb.Clear();
+//sb.AppendJoin(" ", arr.Reverse());
+//Console.WriteLine(sb.ToString());
+
+#endregion
+
+#region string builder chuncks
+
+//var sb = new StringBuilder();
+//sb.Append("Hi,this is sulaiman");
+//Console.WriteLine(sb.Capacity);
+
+//sb.Append("ASP.NET Core Web Developper");
+//Console.WriteLine(sb.Capacity);
+
+//sb.Append("Practic is the solution");
+//Console.WriteLine(sb.Capacity);
+
+//sb.Append("A claim is a statement about a subject by an issuer." +
+//	" Claims represent attributes of the\r\nsubject that are useful" +
+//	" in the context of authentication and authorization operations." +
+//	"\r\nSubjects and issuers are both entities that are part of an " +
+//	"identity scenario. Some typical\r\nexamples of a subject are:" +
+//	" a user, an application or service, a device, or a computer");
+//Console.WriteLine(sb.Capacity);
+//foreach (var chunk in sb.GetChunks())
+//{
+//	Console.WriteLine($"chunk : {chunk} , length:{chunk.Length}");
+//}
+#endregion
+#region string builder copyto
+//var sb = new StringBuilder("sulaiman");
+//char[] chars=new char[sb.Length];
+//sb.CopyTo(0,chars,0,chars.Length);
+
+//foreach (var item in chars)
+//{
+//    Console.WriteLine(item);
+//}
 #endregion

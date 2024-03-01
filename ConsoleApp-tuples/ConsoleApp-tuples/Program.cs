@@ -111,8 +111,8 @@
 //Console.WriteLine(id);
 //Console.WriteLine(name);
 
-(int, string,int) t1 = (1, "su",10);
-t1.Item2 = "sulaiman";
-Console.WriteLine(t1);
+//(int, string,int) t1 = (1, "su",10);
+//t1.Item2 = "sulaiman";
+//Console.WriteLine(t1);
 #endregion
 

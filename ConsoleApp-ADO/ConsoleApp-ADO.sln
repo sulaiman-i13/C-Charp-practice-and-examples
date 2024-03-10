@@ -3,7 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp-ADO", "ConsoleApp-ADO\ConsoleApp-ADO.csproj", "{B37A1F3E-9CD4-4999-B169-8F260944E68C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp-ADO-Read", "ConsoleApp-ADO\ConsoleApp-ADO-Read.csproj", "{B37A1F3E-9CD4-4999-B169-8F260944E68C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp-Ado-Insertion", "ConsoleApp-Ado-Insertion\ConsoleApp-Ado-Insertion.csproj", "{E0A089E5-C0EB-419C-80AF-1C612BFB27FE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp-Ado-Insertion-StoredProcedure", "ConsoleApp-Ado-Insertion-StoredProcedure\ConsoleApp-Ado-Insertion-StoredProcedure.csproj", "{02C44ED7-D880-405C-91B7-4EE7604CC498}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp-Ado-Update", "ConsoleApp-Ado-Update\ConsoleApp-Ado-Update.csproj", "{9C5EF663-DDA2-4768-9238-CB941781CE9D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp-Ado-Delete", "ConsoleApp-Ado-Delete\ConsoleApp-Ado-Delete.csproj", "{55D55AD2-2F7C-4B3F-8758-339CB16E441E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp-Ado-Adapter", "ConsoleApp-Ado-Adapter\ConsoleApp-Ado-Adapter.csproj", "{D12BF4CC-469B-4A7D-BD02-3E30EAEF81F8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp-Ado-Transactions", "ConsoleApp-Ado-Transactions\ConsoleApp-Ado-Transactions.csproj", "{D73B9ADA-0B96-4D6C-935B-35F59A9C4D6B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +27,30 @@ Global
 		{B37A1F3E-9CD4-4999-B169-8F260944E68C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B37A1F3E-9CD4-4999-B169-8F260944E68C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B37A1F3E-9CD4-4999-B169-8F260944E68C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0A089E5-C0EB-419C-80AF-1C612BFB27FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0A089E5-C0EB-419C-80AF-1C612BFB27FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0A089E5-C0EB-419C-80AF-1C612BFB27FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0A089E5-C0EB-419C-80AF-1C612BFB27FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02C44ED7-D880-405C-91B7-4EE7604CC498}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02C44ED7-D880-405C-91B7-4EE7604CC498}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02C44ED7-D880-405C-91B7-4EE7604CC498}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02C44ED7-D880-405C-91B7-4EE7604CC498}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C5EF663-DDA2-4768-9238-CB941781CE9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C5EF663-DDA2-4768-9238-CB941781CE9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C5EF663-DDA2-4768-9238-CB941781CE9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C5EF663-DDA2-4768-9238-CB941781CE9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55D55AD2-2F7C-4B3F-8758-339CB16E441E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55D55AD2-2F7C-4B3F-8758-339CB16E441E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55D55AD2-2F7C-4B3F-8758-339CB16E441E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55D55AD2-2F7C-4B3F-8758-339CB16E441E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D12BF4CC-469B-4A7D-BD02-3E30EAEF81F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D12BF4CC-469B-4A7D-BD02-3E30EAEF81F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D12BF4CC-469B-4A7D-BD02-3E30EAEF81F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D12BF4CC-469B-4A7D-BD02-3E30EAEF81F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D73B9ADA-0B96-4D6C-935B-35F59A9C4D6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D73B9ADA-0B96-4D6C-935B-35F59A9C4D6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D73B9ADA-0B96-4D6C-935B-35F59A9C4D6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D73B9ADA-0B96-4D6C-935B-35F59A9C4D6B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
